@@ -219,6 +219,7 @@ The application handles:
 - python-binance
 - python-dotenv
 - rich
+- requests
 
 Install using:
 
