@@ -259,4 +259,4 @@ pip install -r requirements.txt
 
 **Veeresh Hanni**
 
-Python Developer Assignment – Primetrade.ai
+Computer Science (Foundations) - Internship Assignment – Primetrade.ai
