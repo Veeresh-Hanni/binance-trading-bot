@@ -1,5 +1,7 @@
 from bot.client import client, get_async_client
 from bot.logging_conf import logger
+from binance.exceptions import BinanceAPIException
+from requests.exceptions import RequestException
 
 
 def place_order(
@@ -31,10 +33,20 @@ def place_order(
 
         return response
 
-    except Exception as e:
-
+    except BinanceAPIException as e:
         logger.exception(e)
-        raise
+        print(f"\n❌ Binance API Error ({e.code}): {e.message}")
+        return None
+
+    except RequestException as e:
+        logger.exception(e)
+        print(f"\n❌ Network Error: {e}")
+        return None
+
+    except Exception as e:
+        logger.exception(e)
+        print(f"\n❌ Unexpected Error: {e}")
+        return None
 
 async def async_place_order(
     symbol,
@@ -66,9 +78,19 @@ async def async_place_order(
 
         return response
 
-    except Exception as e:
-
+    except BinanceAPIException as e:
         logger.exception(e)
-        raise
+        print(f"\n❌ Binance API Error ({e.code}): {e.message}")
+        return None
+
+    except RequestException as e:
+        logger.exception(e)
+        print(f"\n❌ Network Error: {e}")
+        return None
+
+    except Exception as e:
+        logger.exception(e)
+        print(f"\n❌ Unexpected Error: {e}")
+        return None
     finally:
         await client.close_connection()
