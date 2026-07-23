@@ -1,0 +1,4 @@
+# all git ignore python related secrets
+*.env
+__pycache__/
+*.log
