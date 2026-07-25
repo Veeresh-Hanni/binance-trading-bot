@@ -2,7 +2,7 @@
 
 A Python CLI application that places **MARKET** and **LIMIT** orders on the **Binance Futures Testnet (USDT-M)**.
 
-This project was developed as part of the **Primetrade.ai Computer Science (Foundations) - Internship Application Task**.
+This project was developed as part of the **Primetrade.ai Python Developer - Internship Task**.
 
 ---
 
@@ -260,4 +260,4 @@ pip install -r requirements.txt
 
 **Veeresh Hanni**
 
-Computer Science (Foundations) - Internship Assignment – Primetrade.ai
+Python Developer - Internship Assignment – Primetrade.ai
